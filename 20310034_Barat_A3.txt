@@ -1,0 +1,6 @@
+Link for the code od Assignment 3: https://colab.research.google.com/drive/1YlUfUA28QWAP7nnnVmG_WvNe2mzWgvKF?usp=sharing
+
+Directions:
+The code for DH parameter are generalised ones. I couldn't save the results for Q:4,5,6. Kindly verify the correctness of code 
+with pre-checked output. 
+Thanks 
