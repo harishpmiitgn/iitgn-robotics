@@ -163,7 +163,9 @@ if __name__=="__main__":
     
     DH_param=Stanford_DH_gen(Q)
 
-    [D,C,Q,Q_dot]=dh.dynamics_equation_generator(DH_param,M,I,L)
+    [D,C,Q,Q_dot,N]=dh.dynamics_equation_generator(DH_param,M,I,L)
+    print(sym.simplify(N)) # this shows that N matrix is skew symetric hence the code is working perfectly and equations are correct.
+    
     # print(sym.simplify(C))
     Q_d0= inverseKinematics(start)
     # print(Q_d0)

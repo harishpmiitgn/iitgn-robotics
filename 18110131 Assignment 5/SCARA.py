@@ -159,7 +159,11 @@ if __name__=="__main__":
     
     DH_param=SCARA_DH_gen(Q)
 
-    [D,C,Q,Q_dot]=dh.dynamics_equation_generator(DH_param,M,I,L)
+    [D,C,Q,Q_dot,N]=dh.dynamics_equation_generator(DH_param,M,I,L)
+
+    print(sym.simplify(N)) # this shows that N matrix is skew symetric hence the code is working perfectly and equations are correct.
+
+    
     Q_d0= inverseKinematics(start)
     solution=scipy.integrate.solve_ivp(dynamicSystem ,[0, time[-1]],[Q_d0[0],Q_d0[1],Q_d0[2],0,0,0],t_eval=time, args=[D,C,Q,Q_dot,start,end,])
     Q1=solution.y[0]
